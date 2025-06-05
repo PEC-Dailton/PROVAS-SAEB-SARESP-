@@ -34,7 +34,7 @@ h2 {
 
 .container {
             display: flex;
-            gap: 60px;
+            gap: 80px;
             margin: 0px 8px;
             padding: 5px;
         }
