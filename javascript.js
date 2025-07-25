@@ -5,8 +5,8 @@
 
 
 async function gerenciarDiasProvas() {
-    let daysProva1 = parseInt(localStorage.getItem('daysProva1')) || 61;
-    let daysProva2 = parseInt(localStorage.getItem('daysProva2')) || 68;
+    let daysProva1 = parseInt(localStorage.getItem('daysProva1')) || 60;
+    let daysProva2 = parseInt(localStorage.getItem('daysProva2')) || 67;
 
     console.log("Dias Prova 1:", daysProva1);
     console.log("Dias Prova 2:", daysProva2);
