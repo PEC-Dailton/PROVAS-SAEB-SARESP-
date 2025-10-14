@@ -5,8 +5,8 @@
 
 
 async function gerenciarDiasProvas() {
-    let daysProva1 = parseInt(localStorage.getItem('daysProva1')) || 5;
-    let daysProva2 = parseInt(localStorage.getItem('daysProva2')) || 12;
+    let daysProva1 = parseInt(localStorage.getItem('daysProva1')) || 4;
+    let daysProva2 = parseInt(localStorage.getItem('daysProva2')) || 11;
 
     console.log("Dias Prova 1:", daysProva1);
     console.log("Dias Prova 2:", daysProva2);
@@ -67,6 +67,7 @@ setInterval(exibirDataHora, 1000);
 
 // Exibe a data e hora imediatamente
 exibirDataHora();
+
 
 
 
