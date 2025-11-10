@@ -9,11 +9,13 @@ body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 10;
-            color: rgb(211, 182, 21);
+            color: rgb(88, 236, 20);
             overflow: hidden;   
             text-align: center;
             margin-top: 10px;
         }
+
+
 .blink {
             font-size: 6vw;
             animation: blinking 1s infinite; /* Dura 1 segundo e repete infinitamente */
@@ -27,7 +29,7 @@ h2 {
             font-size: 4.4vw;
             text-align: center;
             margin: 0px 0;
-            color: rgb(65, 231, 39);
+            color: rgb(65, 9, 77);
         }
 
 
@@ -56,7 +58,7 @@ h2 {
 
  .texto {
 
-    color: rgb(65, 231, 39);
+    color: rgb(176, 209, 28);
     font-size: 55px;
     text-align: center;
 }
@@ -75,6 +77,38 @@ h2 {
     margin-bottom: 20px; /* Espaço abaixo do título */
  
 }
+
+
+
+agenda-provas {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+.provao {
+    color: #eeeb2a; /* Azul para Provão Paulista */
+        font-size: 80px;
+}
+
+.saresp {
+    color: #eeeb2a; /* Verde para SARESP */
+     font-size: 80px;
+}
+
+.ensinofundamental {
+   color: #480c5a; 
+     font-size: 80px;
+}
+
+.ensinomedio {
+   color: #480c5a; 
+     font-size: 80px;
+}
+
 
 @keyframes fadeIn {
             from { opacity: 0; }
@@ -136,3 +170,4 @@ h2 {
         font-size: 5vw;
     }
 }
+
