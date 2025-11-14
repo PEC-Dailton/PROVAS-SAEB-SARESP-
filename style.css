@@ -1,188 +1,179 @@
+    
 body {
-    font-family: Arial, sans-serif;
-    background-color: #030113;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-     font-size: 30px; /* Define o tamanho da fonte do h1 */
-       
-        footer {
-            background-color: #030113;
-            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: rgb(27, 112, 136);
+            font-family: Arial, sans-serif;
+            margin: 20;
+            padding: 0;
+            color: rgb(88, 236, 20);
+            overflow: hidden;   
             text-align: center;
-            padding: 40px;
+            margin-top: px;
         }
-        footer a {
-            color: #0C343D;
-            text-decoration: none;
-            margin: 0 10px;
+
+
+.blink {
+            font-size: 4.4vw;
+            animation: blinking 1s infinite; /* Dura 1 segundo e repete infinitamente */
         }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 600px) {
-            footer {
-                padding: 10px;
-            }
-        
-footer p {
-    margin: 0;                /* Remove margens padrão do parágrafo */
+
+.blue {
+    color: rgba(212, 3, 3, 0.87);
 }
 
-/*******************************************************************************************************
-/*footer img {
- max-width: 80%;          /* Faz a imagem ser responsiva e limita a largura a 80% do contêiner */
- /*   height: auto;            /* Mantém a proporção da imagem */
- /*   padding: 10px 10px 10px 0; /* Adiciona padding em cima, direita e baixo, mas nenhum à esquerda */
-  /*  margin-top: 0px;        /* Espaçamento acima da imagem */
-/*}*/
+h2 {
+            font-size: 3vw;
+            text-align: center;
+            margin: 0px 0;
+            color: rgb(65, 9, 77);
+            font-weight: 200px;
+            
+        }
 
+
+
+.container {
+            display: flex;
+            gap: 80px;
+            margin: 0px 8px;
+            padding: 5px;
+        }
+.quadro {
+            width: 500px;
+            height: 100px;
+            background-color:rgb(31, 1, 70);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 4px;
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+            animation: borderAnimation 2s infinite; /* Aplica a animação */
+            animation-delay: 0.5s;
+        }
+
+ .texto {
+
+    color: rgb(176, 209, 28);
+    font-size: 50px;
+    text-align: center;
 }
 
-body, html {
-    height: 100%;
-    overflow: hidden;
-    scroll-behavior: smooth; /* Habilita rolagem suave */
+ #dataHora {
+    font-size: 40px; /* Tamanho da fonte da data e hora */
+   /* background-color: #220946; /* Fundo branco para destaque */
+    color:#448b47(149, 151, 8);
+    padding: 8px 0  0 ; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+ }
 
+ h1 {
+    font-size: 2.5em; /* Tamanho da fonte do título */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+ 
+}
+
+
+
+agenda-provas {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+.provao {
+    color: #eeeb2a; /* Azul para Provão Paulista */
+        font-size: 50px;
+}
+
+.saresp {
+    color: #eeeb2a; /* Verde para SARESP */
+     font-size: 50px;
+     
+}
+
+.ensinofundamental {
+   color: #480c5a; 
+     font-size: 50px;
+}
+
+.ensinomedio {
+   color: #480c5a; 
+     font-size: 50px;
+}
+
+
+@keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+}
+@keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+}
+
+ @keyframes blinking {
+    0%, 100% {
+        opacity: 1; /* Totalmente visível */
+    }
+    50% {
+        opacity: 0; /* Invisível */
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .quadro {
+        width: 100%;
+        height: auto;
+    }
     
 }
 
-head{
-    font-size: 30px; /* Define o tamanho da fonte do h1 */
-}
-
-
-.tab {
-    display: inline-block;
-    background-color: #0C343D;
-    color: rgb(253, 255, 255);
-    padding: 20px 50px;
-    cursor: pointer;
-    border: none;
-    border-radius: 15px;
-    margin: 10px;
-    transition: background-color 0.3s; /* Transição suave na cor de fundo */
-     font-weight: bold;
-     font-size: 25px;
-}
-
-.tab:hover {
-    background-color: #45a049;
-}
-
-.content {
-    display: none;
-    margin-top: 22px;
-    padding: 22px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid #fbfeff;
-    border-radius: 600px; /* Ajuste na borda arredondada*/
-}
-
-.active {
-    display: block;
-}
-
-iframe {
-    width: 100vh; /* Ajuste a largura do iframe */
-    height: 100vh; /* Ajuste a altura do iframe */
-    border: 10px;
-    scroll-behavior: smooth; /* Habilita rolagem suave */
-    background-color: #000f0f; /* Cor de fundo do iframe */
-    place-items: center;
-    margin: 0 auto; /* Centraliza o iframe horizontalmente */
-    display: grid; /* Necessário para usar place-items */
-    place-items: center; /* Centraliza conteúdo dentro do iframe */
-
-}
-
-/*******************************************************************************************************
-.planilha-container {
-    width: 100%; /* Largura total do contêiner */
- /* height: 80vh; /* Altura do contêiner */
-/*box-shadow: 0 2px 10px rgba(11, 2, 61, 0.1); /* Sombra para destaque */
-/*  overflow: auto; /* Adiciona barra de rolagem se necessário */  
-
-
-.titulo {
-    color: #45a9ba; /* Altere para a cor desejada */
-    text-align: center;
-    font-size: 50px;
-}
-
-.anos, .turmas {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.ano, .turma {
-    background-color: #2ecc71; /* Cor de fundo dos botões */
-    color: white; /* Cor do texto - altere se necessário */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.ano:hover, .turma:hover {
-    background-color: #27ae60; /* Cor de fundo ao passar o mouse */
-}
-
-/*****************************************************************************************************/
-
-@media (max-width: 768px) {
-    .tab {
-        padding: 8px 16px; /* Reduz padding em telas menores */
-    }
-    .content {
-        padding: 20px; /* Reduz padding em telas menores */
-    }
-    iframe {
-        width: 300vw; /* Aumenta largura do iframe para 90% em telas menores */
-        height: 40vh; /* Reduz altura do iframe para 60% em telas menores */
-    }
-    .planilha-container {
-        height: 100vh; /* Ajusta altura do contêiner para 70% em telas menores */
-    }
-    .ano, .turma {
-   width: 100vw; /* Aumenta largura do iframe para 95% em telas muito pequenas */
-        height: 50vh; /* Reduz altura do iframe para 50% em telas muito pequenas */
-}
-    .tab {
-     width: 100vw; /* Aumenta largura do iframe para 95% em telas muito pequenas */
-        height: 50vh; /* Reduz altura do iframe para 50% em telas muito pequenas */
-}
-}
-
 @media (max-width: 480px) {
-    .tab {
-        padding: 6px 12px; /* Mais redução de padding em telas muito pequenas */
+
+    h1 {
+        font-size: 5vw;
     }
-    .content {
-        padding: 10px; /* Mais redução de padding em telas muito pequenas */
-    }
-    iframe {
-        width: 100vw; /* Aumenta largura do iframe para 95% em telas muito pequenas */
-        height: 50vh; /* Reduz altura do iframe para 50% em telas muito pequenas */
-    }
-    .planilha-container {
-        height: 60vh; /* Ajusta altura do contêiner para 60% em telas muito pequenas */
+    h2 {
+        font-size: 5vw;
     }
 
-    .ano, .turma {
-   width: 100vw; /* Aumenta largura do iframe para 95% em telas muito pequenas */
-        height: 40vh; /* Reduz altura do iframe para 50% em telas muito pequenas */
-}
-    .tab {
-     width: 100vw; /* Aumenta largura do iframe para 95% em telas muito pequenas */
-        height: 40vh; /* Reduz altura do iframe para 50% em telas muito pequenas */
+    #dataHora {
+        font-size: 5vw;
+    }
+
+    .quadro {
+        width: 100%;
+    }
+
+    .texto {
+        font-size: 40px;
+    }
+
+    .container {
+        display: flex;
+        margin: 0px 0px;
+        padding: 0px;
+        font-size: 5vw;
+    }
 }
 
-}}
 
 
 
